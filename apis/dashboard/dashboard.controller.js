@@ -15,7 +15,7 @@ exports.create = (req, res, next) => {
         lastseen: req.body.lastseen,
         temp: req.body.temp,
         humidity: req.body.humidity,
-        
+        createdAt : new Date()
       });
  
       station.save().then((station) => {

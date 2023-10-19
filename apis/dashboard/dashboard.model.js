@@ -13,6 +13,10 @@ const Schema = mongoose.Schema({
         type: Number,
         required: true
     },
+    createdAt: {
+        type: Date, // Use the Date type for storing dates
+        default: Date.now // Set the default value to the current date
+    },
     temp: {
         type: Number,
         required: true
