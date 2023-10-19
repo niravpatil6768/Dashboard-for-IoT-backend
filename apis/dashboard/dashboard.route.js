@@ -1,4 +1,4 @@
-const express = require('express'); //import express module
+const express = require('express'); 
 const router = express.Router();
 const dashboardController = require('./dashboard.controller'); 
 

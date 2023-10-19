@@ -1,9 +1,8 @@
-const http = require('http'); //require to create http server and handling http req. and response
-const app = require('./app');  //import isntanc of express application 
-//useful for integration with razopay for payment purpose.
-const port = process.env.PORT || 3000; //define post on which incoming http req. will be listen
+const http = require("http");
+const app = require("./app");
 
-const server = http.createServer(app); //create server. take app as a arguments 
-                                      //it means server will handle req. according to logic define in app.js 
+const port = process.env.PORT || 3000;
+
+const server = http.createServer(app);
 
 server.listen(port);
