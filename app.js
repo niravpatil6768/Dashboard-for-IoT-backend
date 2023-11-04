@@ -7,6 +7,7 @@ app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 
 const dashboardRoutes = require("./apis/dashboard/dashboard.route");
+const userRoutes = require("./apis/user/user.route");
 
 app.get("/health", (req, res, next) => {
   return res.status(200).json({
@@ -30,13 +31,14 @@ app.use((req, res, next) => {
 });
 
 app.use("/dashboard", dashboardRoutes);
+app.use("/user", userRoutes);
 
 
 mongoose.Promise = global.Promise;
 
 mongoose
   .connect(
-    "mongodb+srv://niravpatil098:npn987654N@cluster0.pionla9.mongodb.net/"
+    "mongodb+srv://niravpatil098:npn987654@cluster0.gbjvria.mongodb.net/"
   )
   .then(() => {
     console.log("connect to DB");
